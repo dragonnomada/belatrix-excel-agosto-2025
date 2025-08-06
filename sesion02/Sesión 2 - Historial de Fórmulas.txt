@@ -1,0 +1,67 @@
+> Sesión 2 - Historial de Fórmulas
+
+# Seleccionar todos los datos CTRL+E
+
+# Convertir la selección en una tabla estructurada
+# CTRL+T
+
+# Proyectar toda la tabla
+=TablaAhorros
+
+# Proyectar los encabezados
+=TablaAhorros[#Encabezados]
+
+# Proyectar los totales
+=TablaAhorros[#Totales]
+
+# Calcular el subtotal de una columna
+# 1 - Promedio
+# 4 - Máximo
+# 5 - Mínimo
+# 9 - Suma
+=SUBTOTALES(1; TablaAhorros[Enero])
+
+# Extraer el vector de filas para la columna
+# que coíncida con D3
+=SUBTOTALES($C$16;INDICE(TablaAhorros;0;COINCIDIR(D3;TablaAhorros[#Encabezados];0)))
+
+# Extraer la columna 1 (en todas sus filas)
+# de la tabla
+=INDICE(TablaAhorros;0;1)
+
+# Suma por columna de la tabla
+=TablaAhorros[Enero]+TablaAhorros[Febrero]
+=TablaAhorros[Marzo]+TablaAhorros[Abril]
+=TablaAhorros[Mayo]+TablaAhorros[Junio]
+
+# Selección de una fila (para la tabla)
+=INDICE(TablaAhorros; 3; 0)
+
+# Selección de una columna (para la tabla)
+=INDICE(TablaAhorros; 0; 2)
+
+=TablaAhorros[Febrero]
+
+=TablaAhorros[Enero]:TablaAhorros[Marzo]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

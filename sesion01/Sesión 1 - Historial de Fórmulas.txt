@@ -1,0 +1,69 @@
+> Sesión 1 - Historial de Fórmulas
+
+# Cabeceras transpuestas
+=TRANSPONER(F5:I5)
+
+# Todas las filas en la primera columna
+=INDICE(F6:I14; 0; 1)
+
+# Índice de la columna Matemáticas
+# en las cabeceras
+=COINCIDIR("Matemáticas";F5:I5;0)
+
+# Todas las filas de la columna
+# Matemáticas
+=INDICE(F6:I14; 0; COINCIDIR("Matemáticas";F5:I5;0))
+
+# Todas las filas de la columna
+# dada por k6
+=INDICE($F$6:$I$14; 0; COINCIDIR(K6;$F$5:$I$5;0))
+
+# El mínimo de la columna dada por k6
+=MIN(INDICE($F$6:$I$14; 0; COINCIDIR(K6;$F$5:$I$5;0)))
+
+# El promedio de la columna dada por k6
+=PROMEDIO(INDICE($F$6:$I$14; 0; COINCIDIR(K6;$F$5:$I$5;0)))
+
+# El máximo de la columna dada por k6
+=MAX(INDICE($F$6:$I$14; 0; COINCIDIR(K6;$F$5:$I$5;0)))
+
+# La primera fila con todas las columnas
+=INDICE(F6:I14; 1; 0)
+
+# El vector lógico fila si es menor estricto a 6
+=INDICE(F6:I14; 1; 0) < 6
+
+# El vector lógico fila si es mayor o igual a 9
+=INDICE(F6:I14; 1; 0) >= 9
+
+# El vector lógico fila si es mayor o igual a 6
+# o el vector fila es menor estricto a 9
+=SI.CONJUNTO(INDICE(F6:I14; 1; 0) >= 6; INDICE(F6:I14; 1; 0) < 9)
+
+# Sumar las materias (columnas) para el alumno
+# k17 donde la calificación sea menor estricto a 6
+=SUMA(1 * (INDICE($F$6:$I$14;COINCIDIR(k17; $E$6:$E$14;0);0) < 6))
+
+# Sumar las materias (columnas) para el alumno
+# k17 donde la calificación sea mayor o igual a 9
+=SUMA(1 * (INDICE($F$6:$I$14;COINCIDIR(k17; $E$6:$E$14;0);0) >= 9))
+
+# Sumar las materias (columnas) para el alumno
+# k17 donde la calificación sea mayor o igual a 6
+# y menor estricto a 9
+=SUMA((INDICE($F$6:$I$14;COINCIDIR(k17; $E$6:$E$14; 0);0) >= 6) * (INDICE($F$6:$I$14;COINCIDIR(k17; $E$6:$E$14;0);0) < 9))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
