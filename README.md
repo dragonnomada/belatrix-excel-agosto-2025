@@ -19,7 +19,7 @@
 1.	Creación y manejo de tablas dinámicas
 2.	Campos calculados y elementos calculados
 3.	Gráficos dinámicos
-4.	Secmantadores y escala de tiempo
+4.	Segmantadores y escala de tiempo
 5.	Combinación con tablas estructuradas
 
 ### Módulo III – Automatización con Macros y VBA
