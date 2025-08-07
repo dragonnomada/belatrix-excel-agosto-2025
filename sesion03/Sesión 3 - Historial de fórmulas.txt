@@ -1,0 +1,29 @@
+> Sesión 3 - Historial de fórmulas
+
+# Obtener el promedio del Grupo (L6:L19) 
+# para el totalizador (M6:M19)
+# dado por la celda L23
+=PROMEDIO(FILTRAR(M6:M19,L6:L19=L23))
+
+# Extraer los grupos únicos (P6:P19)
+# y ordenados
+
+=ORDENAR(UNICOS(P6:P19))
+
+# Suma y promedio por Grupo (P6:P19)
+
+=SUMA(FILTRAR($Q$6:$Q$19,$P$6:$P$19=P22))
+=PROMEDIO(FILTRAR($Q$6:$Q$19,$P$6:$P$19=P22))
+
+# Filtrar una fecha y cliente
+
+=FILTRAR(
+INDICE(FILTRAR(Q4:R17,P4:P17=U19),0,2),
+INDICE(FILTRAR(Q4:R17,P4:P17=U19),0,1)=T20)
+
+>>> Filtro por fecha: P4:P17=U19
+
+>>> INDICE(FILTRAR(Q4:R17,P4:P17=U19),0,2) | Total en la fecha
+>>> INDICE(FILTRAR(Q4:R17,P4:P17=U19),0,1) | Cliente en la fecha
+
+>>> INDICE(FILTRAR(Q4:R17,P4:P17=U19),0,1)=T20 | Filtro por cliente
