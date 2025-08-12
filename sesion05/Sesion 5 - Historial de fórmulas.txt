@@ -1,0 +1,17 @@
+> Sesión 5 - Historial de fórmulas
+
+# Filtrar una tabla estructurada
+
+=FILTRAR(TablaIris, TablaIris[variety]="Versicolor")
+
+# Toma los primeros k elementos de la matriz
+
+=TOMAR(FILTRAR(TablaIris, TablaIris[variety]="Versicolor"), 3)
+
+# Dividir un eje de datos en k grupos (para la celda B8)
+
+=ENTERO(RANGO.PERCENTIL.INC(TablaIris[petal.length], B8) * k)
+
+# Dividir un eje de datos en k grupos (para todo el eje de datos)
+
+=ENTERO(RANGO.PERCENTIL.INC(TablaIris[petal.length],TablaIris[petal.length])*4)
