@@ -1,0 +1,121 @@
+> Sesión 6 - Historial de fórmulas
+
+% Hoja: DatosOrders!
+% Cabeceras: A1:N1
+% Matriz de datos: A2:N831
+% Columna desbordada: O2:O831
+% Columna filtro: P2:P831
+
+# Determinar si una celda está vacía
+
+=ESBLANCO(O2)
+
+-> O2...O831
+
+% Hoja: VirtualOrders!
+
+# Extraer los valores (filtrados por válidos)
+
+=FILTRAR(DatosOrders!A2:N831, DatosOrders!P2:P831)
+
+# Recuperar las cabeceras
+
+=DatosOrders!A1:N1
+
+% Hoja: Orders!
+% Tabla: Orders
+
+-> Se pegan los valores (pegado especial)
+-> Se estructura la tabla: <Orders>
+: =$A$1:$N$655 (con encabezados)
+
+-> Corrección del tipo de dato
+
+Tipo: General (texto, ID)
+-------------------------
+*orderID
+*customerID
+*employeeID
+*shipVia
+shipName
+shipAddress
+shipCity
+shipRegion
+shipPostalCode
+shipCountry
+
+Tipo: fecha corta
+-----------------
+orderDate
+requiredDate
+shippedDate
+
+Tipo: número
+------------
+freight
+
+% Hoja: OrderDetails
+% Tabla: OrderDetails
+
+-> Corrección del tipo de dato
+
+Tipo: General (texto, ID)
+-------------------------
+*orderID
+*productID
+
+Tipo: número
+------------
+quantity (entero)
+discount (%)
+
+Tipo: Moneda
+------------
+unitPrice ($)
+
+# Filtrar los valores de una orden específica
+% Celda activa: C2
+
+=FILTRAR(OrderDetails, OrderDetails[orderID]=C2)
+
+# Filtrar los precios unitarios de la celda activa
+% Celda activa: C2
+
+=FILTRAR(OrderDetails[unitPrice],OrderDetails[orderID]=C2)
+
+# Sumar todos los precios asociados a la celda activa
+=SUMA(FILTRAR(OrderDetails[unitPrice],OrderDetails[orderID]=C2))
+=PROMEDIO(FILTRAR(OrderDetails[unitPrice],OrderDetails[orderID]=C2))
+
+# Extracción de los precios unitarios multiplicados por la cantidad
+
+=FILTRAR(OrderDetails[unitPrice]*OrderDetails[quantity],OrderDetails[orderID]=B3)
+
+# Sumar los precios unitarios por la cantidad de productos en la orden activa
+
+=SUMA(FILTRAR(OrderDetails[unitPrice]*OrderDetails[quantity],OrderDetails[orderID]=B3))
+
+# Sumar la cantidad de productos para la orden activa
+
+=SUMA(FILTRAR(OrderDetails[quantity],OrderDetails[orderID]=B3))
+
+# El promedio real (precio unitario promedio) se deduce
+# de la suma total (precio por cantidad) entre las cantidades (suma de cantidades)
+
+=C3/D3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
