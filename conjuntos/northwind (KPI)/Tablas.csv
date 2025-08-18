@@ -1,0 +1,92 @@
+﻿Nombre,Rango,Campo,Tipo,Faltantes,Descripcion,Analizable
+Orders,A2:A831,orderID,ID,0,#Orden,1
+Orders,B2:B831,customerID,ID,0,#Cliente,1
+Orders,C2:C831,employeeID,ID,0,#Empleado,1
+Orders,D2:D831,orderDate,Fecha,0,Fecha de solicitud,1
+Orders,E2:E831,requiredDate,Fecha,0,Fecha de requerimiento,1
+Orders,F2:F831,shippedDate,Fecha,21,Fecha de envío,1
+Orders,G2:G831,shipVia,ID,0,#Transportista,1
+Orders,H2:H831, freight ,Moneda,0,Costo de envío,1
+Orders,I2:I831,shipName,Texto,0,Nombre del comercio de envío,0
+Orders,J2:J831,shipAddress,Texto,0,Dirección envío,0
+Orders,K2:K831,shipCity,Categoria,0,Ciudad de envío,1
+Orders,L2:L831,shipRegion,Categoria,507,Región de envío,0
+Orders,M2:M831,shipPostalCode,Texto,19,Código postal envío,0
+Orders,N2:N831,shipCountry,Categoria,0,País envío,1
+OrderDetails,A2:A2156,orderID,ID,0,#Orden,1
+OrderDetails,B2:B2156,productID,ID,0,#Producto,1
+OrderDetails,C2:C2156, unitPrice ,Moneda,0,Precio unitario,1
+OrderDetails,D2:D2156, quantity ,Entero,0,Cantidad solicitada,1
+OrderDetails,E2:E2156,discount,Porcentaje,0,Descuento aplicado,1
+Customers,A2:A92,customerID,ID,0,#Cliente,1
+Customers,B2:B92,companyName,Texto,0,Nombre del comercio,0
+Customers,C2:C92,contactName,Texto,0,Persona de contacto del comercio,0
+Customers,D2:D92,contactTitle,Categoria,0,Puesto de la persona de contacto del comercio,1
+Customers,E2:E92,address,Texto,0,Dirección del comercio,0
+Customers,F2:F92,city,Categoria,0,Ciudad del comercio,1
+Customers,G2:G92,region,Categoria,60,Región del comercio,0
+Customers,H2:H92,postalCode,Texto,1,Código postal comercio,0
+Customers,I2:I92,country,Categoria,0,País del comercio,1
+Customers,J2:J92,phone,Texto,0,Teléfono del comercio,0
+Customers,K2:K92,fax,Texto,22,Fax del comercio,0
+Employees,A2:A9,employeeID,ID,0,#Empleado,1
+Employees,B2:B9,lastName,Texto,0,Apellido del empleado,0
+Employees,C2:C9,firstName,Texto,0,Nombre del empleado,0
+Employees,D2:D9,title,Categoria,0,Puesto,1
+Employees,E2:E9,titleOfCourtesy,Categoria,0,Referencia educativa,1
+Employees,F2:F9,birthDate,Fecha,0,Fecha de nacimiento,1
+Employees,G2:G9,hireDate,Fecha,0,Fecha de contratación,1
+Employees,H2:H9,address,Texto,0,Dirección del empleado,0
+Employees,I2:I9,city,Categoria,0,Ciudad del empleado,1
+Employees,J2:J9,region,Categoria,3,Región del empleado,0
+Employees,K2:K9,postalCode,Texto,0,Código postal del empleado,0
+Employees,L2:L9,country,Categoria,0,País del empleado,1
+Employees,M2:M9,homePhone,Texto,0,Teléfono del empleado,0
+Employees,N2:N9,extension,Texto,0,Extensión del teléfono,0
+Employees,O2:O9,notes,Texto,0,Notas y comentarios,0
+Employees,P2:P9,reportsTo,ID,1,ID del jefe inmediato,1
+Employees,Q2:Q9,photoPath,Texto,0,Foto del empleado,0
+Employees,R2:R9,education,Categoria,0,Educación principal,1
+Employees,S2:S9,educationDegree,Texto,0,"Grado académico (BA, MA, PhD…)",0
+Employees,T2:T9,educationMode,Categoria,0,"Área / modalidad (Arts, Science…)",1
+Employees,U2:U9,specialization,Binario,0,Especialización académica,1
+Employees,V2:V9,educationType,Categoria,0,Tipo de educación (Psychology…),1
+Employees,W2:W9,educationExtra,Binario,0,Cursos adicionales o certificados,1
+Employees,X2:X9,french,Binario,0,Habla francés,1
+Employees,Y2:Y9,german,Binario,0,Habla alemán,1
+Employees,Z2:Z9,international,Binario,0,Experiencia internacional,1
+Employees,AA2:AA9,languageDomain,Binario,0,Enfoque en idiomas,1
+Shippers,A2:A3,shipperID,ID,0,#Transportista,1
+Shippers,B2:B3,companyName,Texto,0,Nombre del transportista,0
+Shippers,C2:C3,phone,Texto,0,Teléfono del transportista,0
+Products,A2:A78,productID,ID,0,#Producto,1
+Products,B2:B78,productName,Texto,0,Nombre del producto,0
+Products,C2:C78,supplierID,ID,0,#Proveedor,1
+Products,D2:D78,categoryID,ID,0,#CategoríaProducto,1
+Products,E2:E78,quantityPerUnit,Texto,0,Cantidad por pedido,0
+Products,F2:F78, unitPrice ,Moneda,0,Precio unitario,1
+Products,G2:G78,unitsInStock,Entero,0,Unidades disponibles,1
+Products,H2:H78,unitsOnOrder,Entero,0,Unidades en espera de abastecimiento,1
+Products,I2:I78,reorderLevel,Entero,0,Nivel de abastecimiento,1
+Products,J2:J78,discontinued,Binario,0,Descontinuado,1
+Suppliers,A2:A30,supplierID,ID,0,#Proveedor,1
+Suppliers,B2:B30,companyName,Texto,0,Nombre del proveedor,0
+Suppliers,C2:C30,contactName,Texto,0,Persona de contacto del proveedor,0
+Suppliers,D2:D30,contactTitle,Categoria,0,Puesto de la persona de contacto del proveedor,1
+Suppliers,E2:E30,address,Texto,0,Dirección del proveedor,0
+Suppliers,F2:F30,city,Categoria,0,Ciudad del proveedor,1
+Suppliers,G2:G30,region,Categoria,20,Región del proveedor,0
+Suppliers,H2:H30,postalCode,Texto,0,Código postal proveedor,0
+Suppliers,I2:I30,country,Categoria,0,País del proveedor,1
+Suppliers,J2:J30,phone,Texto,0,Teléfono del proveedor,0
+Suppliers,K2:K30,fax,Texto,16,Fax del proveedor,0
+Categories,A2:A8,categoryID,ID,0,#CategoríaProducto,1
+Categories,B2:B8,categoryName,Categoria,0,Nombre de la categoría,1
+Categories,C2:C8,description,Texto,0,Descripción de la categoría,0
+Categories,D2:D8,drinks,Binario,0,Bebidas,1
+Categories,E2:E8,species,Binario,0,Especies,1
+Categories,F2:F8,candies,Binario,0,Dulces,1
+Categories,G2:G8,foods,Binario,0,Alimentos,1
+Categories,H2:H8,fruits,Binario,0,Frutos y semillas,1
+Categories,I2:I8,meat,Binario,0,Carnes,1
+Categories,J2:J8,bread,Binario,0,Pan y cereales,1
