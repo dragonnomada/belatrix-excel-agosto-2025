@@ -1,0 +1,20 @@
+Sesión 9 - Historial de fórmulas
+
+=CONTARA(FILTRAR(Orders[orderID], _
+Orders[customerId]=B2))
+
+=ORDENAR(B2:D92, 3, -1)
+
+=CONTARA(FILTRAR(Orders[orderID], _
+Orders[shipVia]=J2))
+
+=Employee[lastName] & "-" &_
+ Employee[firstName]
+
+=CONTARA(FILTRAR(Orders[orderID], _
+Orders[employeeID]=N2))
+
+=CONTARA(UNICOS(FILTRAR(Orders[customerID], _
+Orders[employeeID]=N2)))
+
+=CONTARA(FILTRAR($S$2#,$V$2:$V$831=W2))
