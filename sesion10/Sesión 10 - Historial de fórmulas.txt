@@ -1,0 +1,4 @@
+Sesión 10 - Historial de fórmulas
+
+=SUMA(INDICE(FILTRAR($B$6:$L$2160, $B$6:$B$2160=N6), 0, 8))
+
